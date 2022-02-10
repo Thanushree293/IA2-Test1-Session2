@@ -1,0 +1,244 @@
+gcc -g p1final.c
+ ./a.out
+enter the value of base and height
+2
+
+4
+area of triangle (2.000000*4.000000)/2 is 4.000000
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x81a: file p1final.c, line 16.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1final.c:16
+16  {
+(gdb) n
+18    input(&a,&b);
+(gdb) s
+input (base=0x7ffc733a5f6c, height=0x7ffc733a5f70) at p1final.c:4
+4     printf("enter the value of base and height\n");
+(gdb) n
+enter the value of base and height
+5     scanf("%f %f",base,height);
+(gdb) n
+3
+5
+6   }
+(gdb) p base
+$1 = (float *) 0x7ffc733a5f6c
+(gdb) p 
+$2 = (float *) 0x7ffc733a5f6c
+(gdb) p *base
+$3 = 3
+(gdb) p *height
+$4 = 5
+(gdb) n
+main () at p1final.c:19
+19    find_area(a,b,&c);
+(gdb) s
+find_area (base=3, height=5, area=0x7ffc733a5f74) at p1final.c:9
+9     *area=(base*height)/2;
+(gdb) n
+10  }
+(gdb) p area
+ 
+ gcc -g p1final.c
+ ./a.out
+enter the value of base and height
+2
+
+4
+area of triangle (2.000000*4.000000)/2 is 4.000000
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x81a: file p1final.c, line 16.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1final.c:16
+16  {
+(gdb) n
+18    input(&a,&b);
+(gdb) s
+input (base=0x7ffc733a5f6c, height=0x7ffc733a5f70) at p1final.c:4
+4     printf("enter the value of base and height\n");
+(gdb) n
+enter the value of base and height
+5     scanf("%f %f",base,height);
+(gdb) n
+3
+5
+6   }
+(gdb) p base
+$1 = (float *) 0x7ffc733a5f6c
+(gdb) p 
+$2 = (float *) 0x7ffc733a5f6c
+(gdb) p *base
+$3 = 3
+(gdb) p *height
+$4 = 5
+(gdb) n
+main () at p1final.c:19
+19    find_area(a,b,&c);
+(gdb) s
+find_area (base=3, height=5, area=0x7ffc733a5f74) at p1final.c:9
+9     *area=(base*height)/2;
+(gdb) n
+10  }
+(gdb) p area
+ 
+ gcc -g p2final.c
+ ./a.out
+enter the value of three sides
+3
+enter the value of three sides
+4
+enter the value of three sides
+3
+it is not a scalene triangle
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7e0: file p2final.c, line 35.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2final.c:35
+35    a=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value of three sides\n");
+(gdb) n
+enter the value of three sides
+6     scanf("%d",&x);
+(gdb) n
+4
+7     return x;
+(gdb) p a
+No symbol "a" in current context.
+(gdb) p x
+$1 = 4
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:36
+36    b=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value of three sides\n");
+(gdb) n
+enter the value of three sides
+6     scanf("%d",&x);
+(gdb) n
+5
+7     return x;
+(gdb) p x
+$2 = 5
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:37
+37    c=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value of three sides\n");
+(gdb) n
+enter the value of three sides
+6     scanf("%d",&x);
+(gdb) n
+9
+7     return x;
+(gdb) p x
+$3 = 9
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:38
+38    isscalene=check_scalene(a,b,c);
+(gdb) s
+check_scalene (a=4, b=5, c=9) at p2final.c:11
+11    if(a!=b && a!=c && b!=c)
+(gdb) n
+13      return 1;
+(gdb) n
+20  }
+(gdb) n
+main () at p2final.c:39
+39    output(a,b,c,isscalene);
+(gdb) s
+output (a=4, b=5, c=9, isscalene=1) at p2final.c:23
+23    if(isscalene ==1)
+(gdb) n
+25      printf("it is a scalene triangle\n");
+(gdb) p isscalene
+$4 = 1
+(gdb) n
+it is a scalene triangle
+31  }
+(gdb) n
+main () at p2final.c:40
+40    return 0;
+(gdb) n
+41  }(gdb) n
+__libc_start_main (main=0x56126ea007d8 <main>, argc=1, argv=0x7ffd8de7dbe8, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7ffd8de7dbd8) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) c
+Continuing.
+[Inferior 1 (process 3218) exited normally]
+(gdb) 
