@@ -1,0 +1,142 @@
+gcc -g p5final.c
+ ./a.out
+enter the x value
+4
+enter the x value
+8
+gcd of 4,8 is 4 n
+bash: n: command not found
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+---Type <return> to continue, or q <return> to quit---n
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x845: file p5final.c, line 28.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5final.c:28
+28    a=input();
+(gdb) s
+input () at p5final.c:3
+3   {
+(gdb) n
+5     printf("enter the x value\n");
+(gdb) n
+enter the x value
+6     scanf("%d",&x);
+(gdb) n
+7
+7     return x;
+(gdb) n
+8   }
+(gdb) p x
+$1 = 7
+(gdb) n
+main () at p5final.c:29
+29    b=input();
+(gdb) s
+input () at p5final.c:3
+3   {
+(gdb) n
+5     printf("enter the x value\n");
+(gdb) n
+enter the x value
+6     scanf("%d",&x);
+(gdb) n
+21
+7     return x;
+(gdb) p x
+$2 = 21
+(gdb) n
+8   }
+(gdb) n
+main () at p5final.c:30
+30    c=gcd(a,b,c);
+(gdb) s
+gcd (a=7, b=21, gcd=0) at p5final.c:11
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+15        gcd=i;
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) p gcd
+$3 = 1
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) p gcd
+$4 = 1
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) p gcd
+$5 = 1
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) p gcd
+$6 = 1
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) p gcd
+$7 = 1
+(gdb) n
+13      if(a%i==0 && b%i==0)
+(gdb) n
+15        gcd=i;
+(gdb) n
+11    for(int i=1;i<=a && i<=b ;i++)
+(gdb) n
+18    return gcd;
+(gdb) p gcd
+$8 = 7
+(gdb) n
+19  }
+(gdb) n
+main () at p5final.c:31
+31    output(a,b,c);
+(gdb) s
+output (a=7, b=21, gcd=7) at p5final.c:22
+22    printf("gcd of %d,%d is %d",a,b,gcd);
+(gdb) n
+23  }
+(gdb) p a
+$9 = 7
+(gdb) p b
+$10 = 21
+(gdb) p gcd
+$11 = 7
+(gdb) n
+main () at p5final.c:32
+32    return 0;
+(gdb) n
+33  }(gdb) c
+Continuing.
+gcd of 7,21 is 7[Inferior 1 (process 44) exited normally]
+(gdb) 
