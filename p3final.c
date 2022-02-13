@@ -29,9 +29,9 @@ void output(int n,int count)
 }
 int main()
 {
-  int a,composite;
-  input_number(a);
-  composite=is_composite(a);
-  output(a,composite);
+  int x,y;
+  x=input_number();
+ y=is_composite(x);
+  output(x,y);
   return 0;
 }
